@@ -1,0 +1,75 @@
+{
+  "name": "vajra-material-ide",
+  "version": "0.1.0",
+  "description": "Material Science Intelligent IDE based on PMD standards",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "set NODE_ENV=development && npm run build:dev && electron dist --dev",
+    "build": "npm run build:prod",
+    "build:dev": "node scripts/build.js",
+    "build:prod": "node scripts/build.js && electron-builder",
+    "test": "jest",
+    "lint": "eslint src/**/*.ts",
+    "format": "prettier --write src/**/*.ts",
+    "clean": "node scripts/clean.js",
+    "postinstall": "npm run build:dev"
+  },
+  "keywords": [
+    "material-science",
+    "ide",
+    "pmd",
+    "ontology",
+    "semantic-web",
+    "materials-informatics"
+  ],
+  "author": "Your Name",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@typescript-eslint/eslint-plugin": "^8.58.2",
+    "@typescript-eslint/parser": "^8.58.2",
+    "chokidar": "^5.0.0",
+    "electron": "^41.2.1",
+    "electron-builder": "^26.8.1",
+    "esbuild": "^0.28.0",
+    "eslint": "^10.2.1",
+    "jest": "^30.3.0",
+    "prettier": "^3.0.0",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "monaco-editor": "^0.55.1",
+    "n3": "^2.0.3",
+    "rdflib": "^2.2.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "sparqljs": "^3.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/vajra.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/vajra/issues"
+  },
+  "homepage": "https://github.com/yourusername/vajra#readme",
+  "build": {
+    "appId": "com.vajra.materialide",
+    "productName": "Vajra Material IDE",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "resources/**/*",
+      "ontologies/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      "ontologies/**"
+    ]
+  }
+}

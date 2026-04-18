@@ -1,0 +1,23 @@
+{
+  "name": "vajra-material-ide",
+  "version": "0.1.0",
+  "description": "Material Science Intelligent IDE based on PMD standards",
+  "main": "src/main.js",
+  "scripts": {
+    "build:ts": "tsc",
+    "build:web": "node scripts/build-web.js",
+    "start:web": "http-server dist -p 3000"
+  },
+  "dependencies": {
+    "monaco-editor": "^0.45.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "n3": "^1.16.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "typescript": "^5.0.0"
+  }
+}
